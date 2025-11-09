@@ -6,14 +6,21 @@
 /*   By: aimokhta <aimokhta@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 18:46:48 by aimokhta          #+#    #+#             */
-/*   Updated: 2025/11/09 19:31:47 by aimokhta         ###   ########.fr       */
+/*   Updated: 2025/11/09 21:12:57 by aimokhta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Serializer.hpp"
 
-int main()
+int main(int ac, char **av)
 {
+	(void)av;
+	if (ac != 1)
+	{
+		std::cerr << "Usage: ./program\n";
+		return 1;
+	}
+
 	Data ptr;
 
 	ptr.str	= "Hello";
@@ -32,7 +39,7 @@ int main()
 	<< "	Comparing results of deserialize data with original	\n"
 	<< "====================================================================\n" << RESET;
 	
-	if (!raw)
+	if (!raw || !newPtr)
 		std::cerr << RED << "Deserialization failed" << RESET << std::endl;
 	else
 		std::cout
