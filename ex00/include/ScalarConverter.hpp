@@ -6,7 +6,7 @@
 /*   By: aimokhta <aimokhta@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 17:15:51 by aimokhta          #+#    #+#             */
-/*   Updated: 2025/11/09 17:17:34 by aimokhta         ###   ########.fr       */
+/*   Updated: 2025/11/09 19:29:36 by aimokhta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@
 # define LIGHT_MAGENTA	"\033[0;95m"
 # define LIGHT_CYAN		"\033[0;96m"
 # define GRAY			"\033[0;90m"
-# define COLOR			"\033[0m"
+# define RESET			"\033[0m"
 # define RL_CYAN		"\001\033[1;36m\002"
-# define RL_COLOR		"\001\033[0m\002"
+# define RL_RESET		"\001\033[0m\002"
 
 # include <iostream>	// std::cout
 # include <cstdlib>		// std::atof
